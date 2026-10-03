@@ -1,0 +1,10 @@
+PORT STATUS REPORT
+Port: Rotterdam (PORT-ROTTERDAM)
+Reporting period: 2026-09-27 to 2026-10-01
+
+Current throughput: 80% of nominal capacity
+Congestion level: moderate
+Average dwell time: 2.6 days
+
+Comments: Rotterdam continues to handle mixed electronics cargo volumes typical
+for this period. Minor customs processing delays noted for outbound cargo.

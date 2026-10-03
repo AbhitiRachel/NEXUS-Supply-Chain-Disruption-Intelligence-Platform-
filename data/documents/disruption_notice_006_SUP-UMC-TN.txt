@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-07-11
+Affected entity: UMC Tainan Fab (SUP-UMC-TN)
+Type: port_strike
+
+Summary: UMC Tainan Fab has reported an operational disruption classified as
+port_strike, expected to last approximately 10 days beginning
+2026-07-16. Preliminary assessment indicates significant impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+UMC Tainan Fab should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.

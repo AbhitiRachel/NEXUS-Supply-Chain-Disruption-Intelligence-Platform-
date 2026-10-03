@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-09-02
+Affected entity: Keelung (PORT-KEELUNG)
+Type: port_strike
+
+Summary: Keelung has reported an operational disruption classified as
+port_strike, expected to last approximately 6 days beginning
+2026-07-08. Preliminary assessment indicates low impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+Keelung should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.

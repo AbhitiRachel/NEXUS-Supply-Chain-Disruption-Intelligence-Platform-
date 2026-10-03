@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-07-20
+Affected entity: Samsung Hwaseong Fab (SUP-SAMSUNG-HW)
+Type: port_strike
+
+Summary: Samsung Hwaseong Fab has reported an operational disruption classified as
+port_strike, expected to last approximately 13 days beginning
+2026-08-13. Preliminary assessment indicates low impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+Samsung Hwaseong Fab should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.

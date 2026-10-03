@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-09-07
+Affected entity: GlobalFoundries Singapore (SUP-GLOBALF-SG)
+Type: customs_delay
+
+Summary: GlobalFoundries Singapore has reported an operational disruption classified as
+customs_delay, expected to last approximately 13 days beginning
+2026-07-16. Preliminary assessment indicates significant impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+GlobalFoundries Singapore should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.

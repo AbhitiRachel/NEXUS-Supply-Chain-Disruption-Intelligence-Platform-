@@ -1,0 +1,10 @@
+PORT STATUS REPORT
+Port: Yokohama (PORT-YOKOHAMA)
+Reporting period: 2026-09-19 to 2026-10-01
+
+Current throughput: 92% of nominal capacity
+Congestion level: low
+Average dwell time: 1.6 days
+
+Comments: Yokohama continues to handle semiconductor cargo volumes typical
+for this period. No significant delays reported this period.

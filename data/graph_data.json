@@ -1,0 +1,295 @@
+{
+  "nodes": [
+    {
+      "id": "SUP-TSMC-HC",
+      "label": "Supplier",
+      "name": "TSMC Hsinchu Fab",
+      "country": "Taiwan",
+      "category": "semiconductor"
+    },
+    {
+      "id": "SUP-UMC-TN",
+      "label": "Supplier",
+      "name": "UMC Tainan Fab",
+      "country": "Taiwan",
+      "category": "semiconductor"
+    },
+    {
+      "id": "SUP-SAMSUNG-HW",
+      "label": "Supplier",
+      "name": "Samsung Hwaseong Fab",
+      "country": "South Korea",
+      "category": "semiconductor"
+    },
+    {
+      "id": "SUP-GLOBALF-SG",
+      "label": "Supplier",
+      "name": "GlobalFoundries Singapore",
+      "country": "Singapore",
+      "category": "semiconductor"
+    },
+    {
+      "id": "SUP-INFINEON-KL",
+      "label": "Supplier",
+      "name": "Infineon Kulim",
+      "country": "Malaysia",
+      "category": "power_components"
+    },
+    {
+      "id": "SUP-MURATA-VN",
+      "label": "Supplier",
+      "name": "Murata Vietnam Plant",
+      "country": "Vietnam",
+      "category": "passive_components"
+    },
+    {
+      "id": "PORT-KEELUNG",
+      "label": "Port",
+      "name": "Keelung",
+      "country": "Taiwan"
+    },
+    {
+      "id": "PORT-BUSAN",
+      "label": "Port",
+      "name": "Busan",
+      "country": "South Korea"
+    },
+    {
+      "id": "PORT-SINGAPORE",
+      "label": "Port",
+      "name": "Singapore",
+      "country": "Singapore"
+    },
+    {
+      "id": "PORT-YOKOHAMA",
+      "label": "Port",
+      "name": "Yokohama",
+      "country": "Japan"
+    },
+    {
+      "id": "PORT-HAMBURG",
+      "label": "Port",
+      "name": "Hamburg",
+      "country": "Germany"
+    },
+    {
+      "id": "PORT-ROTTERDAM",
+      "label": "Port",
+      "name": "Rotterdam",
+      "country": "Netherlands"
+    },
+    {
+      "id": "FAC-SONY-KUMAMOTO",
+      "label": "Factory",
+      "name": "Sony Kumamoto Assembly",
+      "country": "Japan"
+    },
+    {
+      "id": "FAC-DENSO-NAGOYA",
+      "label": "Factory",
+      "name": "Denso Nagoya Plant",
+      "country": "Japan"
+    },
+    {
+      "id": "FAC-BOSCH-STUTTGART",
+      "label": "Factory",
+      "name": "Bosch Stuttgart Plant",
+      "country": "Germany"
+    },
+    {
+      "id": "FAC-PHILIPS-EINDHOVEN",
+      "label": "Factory",
+      "name": "Philips Eindhoven Plant",
+      "country": "Netherlands"
+    },
+    {
+      "id": "PROD-SENSOR-X1",
+      "label": "Product",
+      "name": "Automotive Sensor X1"
+    },
+    {
+      "id": "PROD-CAMERA-M4",
+      "label": "Product",
+      "name": "Camera Module M4"
+    },
+    {
+      "id": "PROD-POWER-CTRL",
+      "label": "Product",
+      "name": "EV Power Controller"
+    },
+    {
+      "id": "PROD-DISPLAY-D2",
+      "label": "Product",
+      "name": "Display Driver D2"
+    }
+  ],
+  "edges": [
+    {
+      "from": "SUP-TSMC-HC",
+      "to": "PORT-KEELUNG",
+      "type": "SHIPS_FROM"
+    },
+    {
+      "from": "SUP-UMC-TN",
+      "to": "PORT-KEELUNG",
+      "type": "SHIPS_FROM"
+    },
+    {
+      "from": "SUP-SAMSUNG-HW",
+      "to": "PORT-BUSAN",
+      "type": "SHIPS_FROM"
+    },
+    {
+      "from": "SUP-GLOBALF-SG",
+      "to": "PORT-SINGAPORE",
+      "type": "SHIPS_FROM"
+    },
+    {
+      "from": "SUP-INFINEON-KL",
+      "to": "PORT-SINGAPORE",
+      "type": "SHIPS_FROM"
+    },
+    {
+      "from": "SUP-MURATA-VN",
+      "to": "PORT-SINGAPORE",
+      "type": "SHIPS_FROM"
+    },
+    {
+      "from": "PORT-KEELUNG",
+      "to": "PORT-YOKOHAMA",
+      "type": "ROUTE_TO",
+      "mode": "sea",
+      "days": 4
+    },
+    {
+      "from": "PORT-BUSAN",
+      "to": "PORT-YOKOHAMA",
+      "type": "ROUTE_TO",
+      "mode": "sea",
+      "days": 2
+    },
+    {
+      "from": "PORT-SINGAPORE",
+      "to": "PORT-YOKOHAMA",
+      "type": "ROUTE_TO",
+      "mode": "sea",
+      "days": 6
+    },
+    {
+      "from": "PORT-KEELUNG",
+      "to": "PORT-HAMBURG",
+      "type": "ROUTE_TO",
+      "mode": "sea",
+      "days": 28
+    },
+    {
+      "from": "PORT-SINGAPORE",
+      "to": "PORT-ROTTERDAM",
+      "type": "ROUTE_TO",
+      "mode": "sea",
+      "days": 24
+    },
+    {
+      "from": "PORT-BUSAN",
+      "to": "PORT-ROTTERDAM",
+      "type": "ROUTE_TO",
+      "mode": "sea",
+      "days": 30
+    },
+    {
+      "from": "PORT-YOKOHAMA",
+      "to": "FAC-SONY-KUMAMOTO",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "PORT-YOKOHAMA",
+      "to": "FAC-DENSO-NAGOYA",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "PORT-HAMBURG",
+      "to": "FAC-BOSCH-STUTTGART",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "PORT-ROTTERDAM",
+      "to": "FAC-PHILIPS-EINDHOVEN",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "SUP-TSMC-HC",
+      "to": "FAC-SONY-KUMAMOTO",
+      "type": "FEEDS"
+    },
+    {
+      "from": "SUP-TSMC-HC",
+      "to": "FAC-DENSO-NAGOYA",
+      "type": "FEEDS"
+    },
+    {
+      "from": "SUP-TSMC-HC",
+      "to": "FAC-BOSCH-STUTTGART",
+      "type": "FEEDS"
+    },
+    {
+      "from": "SUP-UMC-TN",
+      "to": "FAC-SONY-KUMAMOTO",
+      "type": "FEEDS"
+    },
+    {
+      "from": "SUP-SAMSUNG-HW",
+      "to": "FAC-DENSO-NAGOYA",
+      "type": "FEEDS"
+    },
+    {
+      "from": "SUP-SAMSUNG-HW",
+      "to": "FAC-PHILIPS-EINDHOVEN",
+      "type": "FEEDS"
+    },
+    {
+      "from": "SUP-GLOBALF-SG",
+      "to": "FAC-BOSCH-STUTTGART",
+      "type": "FEEDS"
+    },
+    {
+      "from": "SUP-INFINEON-KL",
+      "to": "FAC-BOSCH-STUTTGART",
+      "type": "FEEDS"
+    },
+    {
+      "from": "SUP-INFINEON-KL",
+      "to": "FAC-PHILIPS-EINDHOVEN",
+      "type": "FEEDS"
+    },
+    {
+      "from": "SUP-MURATA-VN",
+      "to": "FAC-SONY-KUMAMOTO",
+      "type": "FEEDS"
+    },
+    {
+      "from": "SUP-MURATA-VN",
+      "to": "FAC-DENSO-NAGOYA",
+      "type": "FEEDS"
+    },
+    {
+      "from": "FAC-SONY-KUMAMOTO",
+      "to": "PROD-CAMERA-M4",
+      "type": "PRODUCES"
+    },
+    {
+      "from": "FAC-DENSO-NAGOYA",
+      "to": "PROD-SENSOR-X1",
+      "type": "PRODUCES"
+    },
+    {
+      "from": "FAC-BOSCH-STUTTGART",
+      "to": "PROD-POWER-CTRL",
+      "type": "PRODUCES"
+    },
+    {
+      "from": "FAC-PHILIPS-EINDHOVEN",
+      "to": "PROD-DISPLAY-D2",
+      "type": "PRODUCES"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+SUPPLY AGREEMENT SUMMARY
+Supplier: Infineon Kulim (SUP-INFINEON-KL)
+Counterparty: NEXUS Electronics Group
+Effective date: 2026-07-09
+Term: 24 months, auto-renewing
+
+Key terms:
+- Minimum order commitment: 150000 units per quarter
+- Lead time SLA: 31 days from order confirmation to port handoff
+- Force majeure clause covers: port_strike, geopolitical_restriction
+- Penalty for late delivery beyond SLA: 1% of shipment value per week delayed
+- Alternate sourcing clause: counterparty may source up to 10% of volume from
+  an alternate supplier without breach if lead time SLA is missed twice in a quarter.
+
+Notes: This supplier has been a partner since 2018 with a delivery
+reliability track record of 96% on-time over the past 12 months.

@@ -1,0 +1,10 @@
+PORT STATUS REPORT
+Port: Hamburg (PORT-HAMBURG)
+Reporting period: 2026-09-21 to 2026-10-01
+
+Current throughput: 85% of nominal capacity
+Congestion level: elevated
+Average dwell time: 3.9 days
+
+Comments: Hamburg continues to handle general cargo volumes typical
+for this period. Weather monitoring in effect; no closures at this time.

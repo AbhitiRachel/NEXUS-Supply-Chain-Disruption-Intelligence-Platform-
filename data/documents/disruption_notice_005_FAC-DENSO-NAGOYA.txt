@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-09-27
+Affected entity: Denso Nagoya Plant (FAC-DENSO-NAGOYA)
+Type: customs_delay
+
+Summary: Denso Nagoya Plant has reported an operational disruption classified as
+customs_delay, expected to last approximately 4 days beginning
+2026-07-18. Preliminary assessment indicates low impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+Denso Nagoya Plant should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.

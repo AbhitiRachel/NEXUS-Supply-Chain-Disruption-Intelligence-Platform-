@@ -1,0 +1,24 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# System deps some packages (chromadb/onnxruntime) need to build wheels cleanly
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential curl \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY data/ data/
+COPY src/ src/
+
+# Data files (graph_data.json, nexus.db, documents/) are generated at
+# container startup by the entrypoint script below, rather than baked
+# into the image -- this keeps the image reproducible from source and
+# avoids shipping a stale dataset if schema.py changes later.
+COPY docker/entrypoint-api.sh /entrypoint-api.sh
+RUN chmod +x /entrypoint-api.sh
+
+EXPOSE 8000
+ENTRYPOINT ["/entrypoint-api.sh"]

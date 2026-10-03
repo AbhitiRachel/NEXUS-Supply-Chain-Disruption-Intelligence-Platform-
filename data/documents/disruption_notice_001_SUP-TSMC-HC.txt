@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-08-01
+Affected entity: TSMC Hsinchu Fab (SUP-TSMC-HC)
+Type: geopolitical_restriction
+
+Summary: TSMC Hsinchu Fab has reported an operational disruption classified as
+geopolitical_restriction, expected to last approximately 9 days beginning
+2026-07-20. Preliminary assessment indicates significant impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+TSMC Hsinchu Fab should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.

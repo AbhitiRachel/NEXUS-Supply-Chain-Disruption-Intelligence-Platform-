@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    ports:
+      - "8000:8000"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - NEXUS_JWT_SECRET=${NEXUS_JWT_SECRET:-dev-only-secret-change-in-production}
+    volumes:
+      - nexus_data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - NEXUS_API_BASE=http://api:8000
+    volumes:
+      - nexus_data:/app/data
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  nexus_data:

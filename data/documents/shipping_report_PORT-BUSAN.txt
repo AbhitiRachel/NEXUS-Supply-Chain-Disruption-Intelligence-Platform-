@@ -1,0 +1,10 @@
+PORT STATUS REPORT
+Port: Busan (PORT-BUSAN)
+Reporting period: 2026-09-27 to 2026-10-01
+
+Current throughput: 93% of nominal capacity
+Congestion level: high
+Average dwell time: 2.2 days
+
+Comments: Busan continues to handle mixed electronics cargo volumes typical
+for this period. No significant delays reported this period.

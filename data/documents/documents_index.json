@@ -1,0 +1,164 @@
+[
+  {
+    "filename": "contract_SUP-TSMC-HC.txt",
+    "doc_type": "contract",
+    "entity_id": "SUP-TSMC-HC",
+    "entity_name": "TSMC Hsinchu Fab"
+  },
+  {
+    "filename": "contract_SUP-UMC-TN.txt",
+    "doc_type": "contract",
+    "entity_id": "SUP-UMC-TN",
+    "entity_name": "UMC Tainan Fab"
+  },
+  {
+    "filename": "contract_SUP-SAMSUNG-HW.txt",
+    "doc_type": "contract",
+    "entity_id": "SUP-SAMSUNG-HW",
+    "entity_name": "Samsung Hwaseong Fab"
+  },
+  {
+    "filename": "contract_SUP-GLOBALF-SG.txt",
+    "doc_type": "contract",
+    "entity_id": "SUP-GLOBALF-SG",
+    "entity_name": "GlobalFoundries Singapore"
+  },
+  {
+    "filename": "contract_SUP-INFINEON-KL.txt",
+    "doc_type": "contract",
+    "entity_id": "SUP-INFINEON-KL",
+    "entity_name": "Infineon Kulim"
+  },
+  {
+    "filename": "contract_SUP-MURATA-VN.txt",
+    "doc_type": "contract",
+    "entity_id": "SUP-MURATA-VN",
+    "entity_name": "Murata Vietnam Plant"
+  },
+  {
+    "filename": "disruption_notice_000_PORT-HAMBURG.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "PORT-HAMBURG",
+    "entity_name": "Hamburg"
+  },
+  {
+    "filename": "disruption_notice_001_SUP-MURATA-VN.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "SUP-MURATA-VN",
+    "entity_name": "Murata Vietnam Plant"
+  },
+  {
+    "filename": "disruption_notice_002_PORT-YOKOHAMA.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "PORT-YOKOHAMA",
+    "entity_name": "Yokohama"
+  },
+  {
+    "filename": "disruption_notice_003_FAC-DENSO-NAGOYA.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "FAC-DENSO-NAGOYA",
+    "entity_name": "Denso Nagoya Plant"
+  },
+  {
+    "filename": "disruption_notice_004_SUP-SAMSUNG-HW.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "SUP-SAMSUNG-HW",
+    "entity_name": "Samsung Hwaseong Fab"
+  },
+  {
+    "filename": "disruption_notice_005_FAC-DENSO-NAGOYA.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "FAC-DENSO-NAGOYA",
+    "entity_name": "Denso Nagoya Plant"
+  },
+  {
+    "filename": "disruption_notice_006_SUP-GLOBALF-SG.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "SUP-GLOBALF-SG",
+    "entity_name": "GlobalFoundries Singapore"
+  },
+  {
+    "filename": "disruption_notice_007_SUP-GLOBALF-SG.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "SUP-GLOBALF-SG",
+    "entity_name": "GlobalFoundries Singapore"
+  },
+  {
+    "filename": "disruption_notice_008_FAC-BOSCH-STUTTGART.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "FAC-BOSCH-STUTTGART",
+    "entity_name": "Bosch Stuttgart Plant"
+  },
+  {
+    "filename": "disruption_notice_009_SUP-SAMSUNG-HW.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "SUP-SAMSUNG-HW",
+    "entity_name": "Samsung Hwaseong Fab"
+  },
+  {
+    "filename": "disruption_notice_010_FAC-SONY-KUMAMOTO.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "FAC-SONY-KUMAMOTO",
+    "entity_name": "Sony Kumamoto Assembly"
+  },
+  {
+    "filename": "disruption_notice_011_FAC-SONY-KUMAMOTO.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "FAC-SONY-KUMAMOTO",
+    "entity_name": "Sony Kumamoto Assembly"
+  },
+  {
+    "filename": "disruption_notice_012_PORT-KEELUNG.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "PORT-KEELUNG",
+    "entity_name": "Keelung"
+  },
+  {
+    "filename": "disruption_notice_013_PORT-ROTTERDAM.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "PORT-ROTTERDAM",
+    "entity_name": "Rotterdam"
+  },
+  {
+    "filename": "disruption_notice_014_SUP-UMC-TN.txt",
+    "doc_type": "disruption_notice",
+    "entity_id": "SUP-UMC-TN",
+    "entity_name": "UMC Tainan Fab"
+  },
+  {
+    "filename": "shipping_report_PORT-KEELUNG.txt",
+    "doc_type": "shipping_report",
+    "entity_id": "PORT-KEELUNG",
+    "entity_name": "Keelung"
+  },
+  {
+    "filename": "shipping_report_PORT-BUSAN.txt",
+    "doc_type": "shipping_report",
+    "entity_id": "PORT-BUSAN",
+    "entity_name": "Busan"
+  },
+  {
+    "filename": "shipping_report_PORT-SINGAPORE.txt",
+    "doc_type": "shipping_report",
+    "entity_id": "PORT-SINGAPORE",
+    "entity_name": "Singapore"
+  },
+  {
+    "filename": "shipping_report_PORT-YOKOHAMA.txt",
+    "doc_type": "shipping_report",
+    "entity_id": "PORT-YOKOHAMA",
+    "entity_name": "Yokohama"
+  },
+  {
+    "filename": "shipping_report_PORT-HAMBURG.txt",
+    "doc_type": "shipping_report",
+    "entity_id": "PORT-HAMBURG",
+    "entity_name": "Hamburg"
+  },
+  {
+    "filename": "shipping_report_PORT-ROTTERDAM.txt",
+    "doc_type": "shipping_report",
+    "entity_id": "PORT-ROTTERDAM",
+    "entity_name": "Rotterdam"
+  }
+]

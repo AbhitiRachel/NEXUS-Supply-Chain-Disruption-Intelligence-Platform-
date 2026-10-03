@@ -1,0 +1,16 @@
+SUPPLY AGREEMENT SUMMARY
+Supplier: UMC Tainan Fab (SUP-UMC-TN)
+Counterparty: NEXUS Electronics Group
+Effective date: 2025-11-24
+Term: 24 months, auto-renewing
+
+Key terms:
+- Minimum order commitment: 50000 units per quarter
+- Lead time SLA: 41 days from order confirmation to port handoff
+- Force majeure clause covers: geopolitical_restriction, typhoon_closure
+- Penalty for late delivery beyond SLA: 5% of shipment value per week delayed
+- Alternate sourcing clause: counterparty may source up to 25% of volume from
+  an alternate supplier without breach if lead time SLA is missed twice in a quarter.
+
+Notes: This supplier has been a partner since 2019 with a delivery
+reliability track record of 83% on-time over the past 12 months.

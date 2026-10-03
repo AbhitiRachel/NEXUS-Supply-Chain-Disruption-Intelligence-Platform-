@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-09-20
+Affected entity: Bosch Stuttgart Plant (FAC-BOSCH-STUTTGART)
+Type: typhoon_closure
+
+Summary: Bosch Stuttgart Plant has reported an operational disruption classified as
+typhoon_closure, expected to last approximately 13 days beginning
+2026-08-13. Preliminary assessment indicates low impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+Bosch Stuttgart Plant should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.

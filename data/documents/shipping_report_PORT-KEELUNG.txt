@@ -1,0 +1,10 @@
+PORT STATUS REPORT
+Port: Keelung (PORT-KEELUNG)
+Reporting period: 2026-10-01 to 2026-10-01
+
+Current throughput: 99% of nominal capacity
+Congestion level: low
+Average dwell time: 4.1 days
+
+Comments: Keelung continues to handle semiconductor cargo volumes typical
+for this period. No significant delays reported this period.

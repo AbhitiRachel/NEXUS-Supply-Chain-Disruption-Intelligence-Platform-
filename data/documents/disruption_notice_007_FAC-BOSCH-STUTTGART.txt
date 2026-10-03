@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-07-06
+Affected entity: Bosch Stuttgart Plant (FAC-BOSCH-STUTTGART)
+Type: customs_delay
+
+Summary: Bosch Stuttgart Plant has reported an operational disruption classified as
+customs_delay, expected to last approximately 14 days beginning
+2026-07-21. Preliminary assessment indicates moderate impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+Bosch Stuttgart Plant should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.

@@ -1,0 +1,16 @@
+SUPPLY AGREEMENT SUMMARY
+Supplier: Murata Vietnam Plant (SUP-MURATA-VN)
+Counterparty: NEXUS Electronics Group
+Effective date: 2025-11-04
+Term: 24 months, auto-renewing
+
+Key terms:
+- Minimum order commitment: 150000 units per quarter
+- Lead time SLA: 35 days from order confirmation to port handoff
+- Force majeure clause covers: geopolitical_restriction, customs_delay
+- Penalty for late delivery beyond SLA: 2% of shipment value per week delayed
+- Alternate sourcing clause: counterparty may source up to 15% of volume from
+  an alternate supplier without breach if lead time SLA is missed twice in a quarter.
+
+Notes: This supplier has been a partner since 2024 with a delivery
+reliability track record of 84% on-time over the past 12 months.

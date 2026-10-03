@@ -1,0 +1,10 @@
+PORT STATUS REPORT
+Port: Singapore (PORT-SINGAPORE)
+Reporting period: 2026-09-09 to 2026-10-01
+
+Current throughput: 79% of nominal capacity
+Congestion level: low
+Average dwell time: 4.0 days
+
+Comments: Singapore continues to handle semiconductor cargo volumes typical
+for this period. No significant delays reported this period.

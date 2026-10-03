@@ -1,0 +1,19 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential curl \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY data/ data/
+COPY src/ src/
+
+COPY docker/entrypoint-dashboard.sh /entrypoint-dashboard.sh
+RUN chmod +x /entrypoint-dashboard.sh
+
+EXPOSE 8501
+ENTRYPOINT ["/entrypoint-dashboard.sh"]

@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-09-29
+Affected entity: GlobalFoundries Singapore (SUP-GLOBALF-SG)
+Type: port_strike
+
+Summary: GlobalFoundries Singapore has reported an operational disruption classified as
+port_strike, expected to last approximately 14 days beginning
+2026-09-15. Preliminary assessment indicates moderate impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+GlobalFoundries Singapore should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.

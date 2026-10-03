@@ -1,0 +1,16 @@
+SUPPLY AGREEMENT SUMMARY
+Supplier: GlobalFoundries Singapore (SUP-GLOBALF-SG)
+Counterparty: NEXUS Electronics Group
+Effective date: 2025-11-30
+Term: 24 months, auto-renewing
+
+Key terms:
+- Minimum order commitment: 150000 units per quarter
+- Lead time SLA: 25 days from order confirmation to port handoff
+- Force majeure clause covers: customs_delay, port_strike
+- Penalty for late delivery beyond SLA: 1% of shipment value per week delayed
+- Alternate sourcing clause: counterparty may source up to 10% of volume from
+  an alternate supplier without breach if lead time SLA is missed twice in a quarter.
+
+Notes: This supplier has been a partner since 2019 with a delivery
+reliability track record of 83% on-time over the past 12 months.

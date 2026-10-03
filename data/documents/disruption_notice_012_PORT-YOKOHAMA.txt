@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-07-17
+Affected entity: Yokohama (PORT-YOKOHAMA)
+Type: geopolitical_restriction
+
+Summary: Yokohama has reported an operational disruption classified as
+geopolitical_restriction, expected to last approximately 8 days beginning
+2026-08-11. Preliminary assessment indicates significant impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+Yokohama should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.

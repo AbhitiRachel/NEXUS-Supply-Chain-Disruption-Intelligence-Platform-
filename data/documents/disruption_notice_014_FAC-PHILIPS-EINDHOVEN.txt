@@ -1,0 +1,13 @@
+DISRUPTION NOTICE
+Date: 2026-08-28
+Affected entity: Philips Eindhoven Plant (FAC-PHILIPS-EINDHOVEN)
+Type: factory_shutdown
+
+Summary: Philips Eindhoven Plant has reported an operational disruption classified as
+factory_shutdown, expected to last approximately 13 days beginning
+2026-08-10. Preliminary assessment indicates significant impact on
+throughput.
+
+Recommended monitoring: shipments and orders routed through or dependent on
+Philips Eindhoven Plant should be flagged for review until normal operations resume.
+Downstream partners should assess buffer inventory levels accordingly.
