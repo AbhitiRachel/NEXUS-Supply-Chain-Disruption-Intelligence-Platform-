@@ -1,7 +1,7 @@
 SUPPLY AGREEMENT SUMMARY
 Supplier: Infineon Kulim (SUP-INFINEON-KL)
 Counterparty: NEXUS Electronics Group
-Effective date: 2026-07-09
+Effective date: 2026-07-12
 Term: 24 months, auto-renewing
 
 Key terms:

@@ -1,6 +1,6 @@
 PORT STATUS REPORT
 Port: Rotterdam (PORT-ROTTERDAM)
-Reporting period: 2026-09-27 to 2026-10-01
+Reporting period: 2026-09-30 to 2026-10-04
 
 Current throughput: 80% of nominal capacity
 Congestion level: moderate

@@ -1,11 +1,11 @@
 DISRUPTION NOTICE
-Date: 2026-09-08
+Date: 2026-09-11
 Affected entity: Sony Kumamoto Assembly (FAC-SONY-KUMAMOTO)
 Type: typhoon_closure
 
 Summary: Sony Kumamoto Assembly has reported an operational disruption classified as
 typhoon_closure, expected to last approximately 10 days beginning
-2026-09-25. Preliminary assessment indicates low impact on
+2026-09-28. Preliminary assessment indicates low impact on
 throughput.
 
 Recommended monitoring: shipments and orders routed through or dependent on

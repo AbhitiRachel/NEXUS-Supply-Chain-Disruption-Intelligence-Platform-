@@ -1,11 +1,11 @@
 DISRUPTION NOTICE
-Date: 2026-09-24
+Date: 2026-09-27
 Affected entity: UMC Tainan Fab (SUP-UMC-TN)
 Type: customs_delay
 
 Summary: UMC Tainan Fab has reported an operational disruption classified as
 customs_delay, expected to last approximately 3 days beginning
-2026-07-29. Preliminary assessment indicates low impact on
+2026-08-01. Preliminary assessment indicates low impact on
 throughput.
 
 Recommended monitoring: shipments and orders routed through or dependent on

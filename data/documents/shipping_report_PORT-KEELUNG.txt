@@ -1,6 +1,6 @@
 PORT STATUS REPORT
 Port: Keelung (PORT-KEELUNG)
-Reporting period: 2026-10-01 to 2026-10-01
+Reporting period: 2026-10-04 to 2026-10-04
 
 Current throughput: 99% of nominal capacity
 Congestion level: low

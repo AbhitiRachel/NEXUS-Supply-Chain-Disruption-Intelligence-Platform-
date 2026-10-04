@@ -1,7 +1,7 @@
 SUPPLY AGREEMENT SUMMARY
 Supplier: Samsung Hwaseong Fab (SUP-SAMSUNG-HW)
 Counterparty: NEXUS Electronics Group
-Effective date: 2026-08-08
+Effective date: 2026-08-11
 Term: 24 months, auto-renewing
 
 Key terms:

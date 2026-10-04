@@ -1,11 +1,11 @@
 DISRUPTION NOTICE
-Date: 2026-08-13
+Date: 2026-08-16
 Affected entity: Rotterdam (PORT-ROTTERDAM)
 Type: factory_shutdown
 
 Summary: Rotterdam has reported an operational disruption classified as
 factory_shutdown, expected to last approximately 8 days beginning
-2026-09-04. Preliminary assessment indicates low impact on
+2026-09-07. Preliminary assessment indicates low impact on
 throughput.
 
 Recommended monitoring: shipments and orders routed through or dependent on

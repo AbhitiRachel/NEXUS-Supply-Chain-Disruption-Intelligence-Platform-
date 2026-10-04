@@ -1,7 +1,7 @@
 SUPPLY AGREEMENT SUMMARY
 Supplier: GlobalFoundries Singapore (SUP-GLOBALF-SG)
 Counterparty: NEXUS Electronics Group
-Effective date: 2025-11-30
+Effective date: 2025-12-03
 Term: 24 months, auto-renewing
 
 Key terms:

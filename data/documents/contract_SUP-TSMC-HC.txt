@@ -1,7 +1,7 @@
 SUPPLY AGREEMENT SUMMARY
 Supplier: TSMC Hsinchu Fab (SUP-TSMC-HC)
 Counterparty: NEXUS Electronics Group
-Effective date: 2026-09-12
+Effective date: 2026-09-15
 Term: 24 months, auto-renewing
 
 Key terms:

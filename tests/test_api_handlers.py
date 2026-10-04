@@ -18,7 +18,9 @@ from data.generate_sql_data import generate as generate_sql_data
 from data.generate_documents import generate as generate_documents
 from src.security.auth import UserStore, issue_token
 from src.audit.hash_chain import AuditLog
-from src.api.handlers import handle_query, handle_whatif, handle_get_audit_log, HandlerError
+from src.api.handlers import (
+    handle_query, handle_whatif, handle_get_audit_log, handle_get_kpis, HandlerError,
+)
 
 TEST_AUDIT_DB = Path(__file__).parent / "_test_api_audit.db"
 
@@ -42,6 +44,10 @@ def _make_tokens():
     viewer = store.create_user("viewer1", "pw", "viewer")
     analyst = store.create_user("analyst1", "pw", "analyst")
     return issue_token(viewer), issue_token(analyst)
+
+
+def _make_admin_token():
+    return issue_token(UserStore().create_user("admin1", "pw", "admin"))
 
 
 def _fake_sql_gen(question, schema, error_feedback):
@@ -141,13 +147,22 @@ def test_whatif_is_logged_with_cost_and_recommendation():
 
 # --- /audit-log ----------------------------------------------------------------
 
-def test_audit_log_accessible_to_analyst():
-    _, analyst_token = _make_tokens()
+def test_audit_log_accessible_to_admin():
     audit = AuditLog(db_path=TEST_AUDIT_DB)
     audit.append("test_event", "system", "test details")
-    result = handle_get_audit_log(analyst_token, audit)
+    result = handle_get_audit_log(_make_admin_token(), audit)
     assert result["chain_intact"] is True
     assert result["entry_count"] == 1
+
+
+def test_audit_log_denied_to_analyst():
+    _, analyst_token = _make_tokens()
+    audit = AuditLog(db_path=TEST_AUDIT_DB)
+    try:
+        handle_get_audit_log(analyst_token, audit)
+        assert False, "Expected HandlerError -- audit log is admin-only"
+    except HandlerError as e:
+        assert e.status_code == 401
 
 
 def test_audit_log_denied_to_viewer():
@@ -156,5 +171,24 @@ def test_audit_log_denied_to_viewer():
     try:
         handle_get_audit_log(viewer_token, audit)
         assert False, "Expected HandlerError -- viewer lacks view_audit_log permission"
+    except HandlerError as e:
+        assert e.status_code == 401
+
+
+# --- /kpis ---------------------------------------------------------------------
+
+def test_kpis_available_to_every_role():
+    viewer_token, analyst_token = _make_tokens()
+    for token in (viewer_token, analyst_token, _make_admin_token()):
+        k = handle_get_kpis(token)
+        assert k["total_shipments"] > 0
+        assert k["on_time_shipments"] + k["delayed_shipments"] <= k["total_shipments"]
+        assert 0 <= k["on_time_rate_pct"] <= 100
+
+
+def test_kpis_rejects_invalid_token():
+    try:
+        handle_get_kpis("not-a-real-token")
+        assert False, "Expected HandlerError for invalid token"
     except HandlerError as e:
         assert e.status_code == 401

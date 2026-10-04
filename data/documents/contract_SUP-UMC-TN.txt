@@ -1,7 +1,7 @@
 SUPPLY AGREEMENT SUMMARY
 Supplier: UMC Tainan Fab (SUP-UMC-TN)
 Counterparty: NEXUS Electronics Group
-Effective date: 2025-11-24
+Effective date: 2025-11-27
 Term: 24 months, auto-renewing
 
 Key terms:

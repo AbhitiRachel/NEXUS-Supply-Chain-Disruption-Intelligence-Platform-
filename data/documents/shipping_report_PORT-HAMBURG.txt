@@ -1,6 +1,6 @@
 PORT STATUS REPORT
 Port: Hamburg (PORT-HAMBURG)
-Reporting period: 2026-09-21 to 2026-10-01
+Reporting period: 2026-09-24 to 2026-10-04
 
 Current throughput: 85% of nominal capacity
 Congestion level: elevated

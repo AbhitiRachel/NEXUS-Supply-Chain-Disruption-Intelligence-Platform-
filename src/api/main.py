@@ -16,7 +16,8 @@ Endpoints:
   POST /auth/login          -> returns a JWT token
   POST /query                -> ask a question (any authenticated role)
   POST /whatif                -> run a what-if simulation (analyst/admin only)
-  GET  /audit-log              -> view the tamper-evident audit trail (analyst/admin only)
+  GET  /audit-log              -> view the tamper-evident audit trail (admin only)
+  GET  /kpis                    -> headline shipment KPIs for the Executive Dashboard (any authenticated role)
   GET  /health
 """
 
@@ -27,7 +28,7 @@ from src.security.auth import UserStore, issue_token, AuthError
 from src.agents.sql_agent import groq_sql_generator
 from src.audit.hash_chain import AuditLog
 from src.api.handlers import (
-    handle_query, handle_whatif, handle_get_audit_log, HandlerError,
+    handle_query, handle_whatif, handle_get_audit_log, handle_get_kpis, HandlerError,
 )
 
 app = FastAPI(title="NEXUS", description="Agentic Supply Chain Resilience Platform", version="0.1.0")
@@ -108,5 +109,14 @@ def audit_log(authorization: str = Header(None)):
     token = _extract_token(authorization)
     try:
         return handle_get_audit_log(token, _audit_log)
+    except HandlerError as e:
+        raise HTTPException(status_code=e.status_code, detail=e.message)
+
+
+@app.get("/kpis")
+def kpis(authorization: str = Header(None)):
+    token = _extract_token(authorization)
+    try:
+        return handle_get_kpis(token)
     except HandlerError as e:
         raise HTTPException(status_code=e.status_code, detail=e.message)

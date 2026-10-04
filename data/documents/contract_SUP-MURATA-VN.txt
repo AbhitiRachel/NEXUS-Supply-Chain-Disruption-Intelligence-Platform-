@@ -1,7 +1,7 @@
 SUPPLY AGREEMENT SUMMARY
 Supplier: Murata Vietnam Plant (SUP-MURATA-VN)
 Counterparty: NEXUS Electronics Group
-Effective date: 2025-11-04
+Effective date: 2025-11-07
 Term: 24 months, auto-renewing
 
 Key terms:

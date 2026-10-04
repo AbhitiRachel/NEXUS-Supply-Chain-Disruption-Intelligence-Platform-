@@ -16,8 +16,11 @@ because it's thin. Run tests/test_api_handlers.py on your machine once
 fastapi is installed to also exercise main.py directly if you want that
 extra layer covered too.
 """
+"""Handles GET /audit-log. Requires 'view_audit_log' (admin only)."""
 
+import sqlite3
 from dataclasses import asdict, is_dataclass
+from pathlib import Path
 
 from src.agents.supervisor import Supervisor
 from src.agents.simulation_agent import SimulationAgent
@@ -25,6 +28,9 @@ from src.agents.recommender import Recommender
 from src.security.auth import require_permission, AuthError
 from src.security.prompt_guard import screen_input
 from src.audit.hash_chain import AuditLog
+
+
+DB_PATH = Path(__file__).parent.parent.parent / "data" / "nexus.db"
 
 
 class HandlerError(Exception):
@@ -158,4 +164,40 @@ def handle_get_audit_log(token: str, audit_log: AuditLog) -> dict:
         "integrity_issue": reason,
         "entry_count": len(entries),
         "entries": [_to_jsonable(e) for e in entries],
+    }
+
+
+def handle_get_kpis(token: str, db_path: Path = DB_PATH) -> dict:
+    """
+    Handles GET /kpis. Requires the 'query' permission (all roles), the same
+    as the read-only Executive Dashboard it feeds. Serving these from the API
+    means the dashboard no longer needs its own copy of nexus.db, so it reads
+    the same data the agents do even when deployed as a separate service.
+    """
+    try:
+        require_permission(token, "query")
+    except AuthError as e:
+        raise HandlerError(str(e), status_code=401)
+
+    conn = sqlite3.connect(db_path)
+    try:
+        total = conn.execute("SELECT COUNT(*) FROM shipments").fetchone()[0]
+        on_time = conn.execute("SELECT COUNT(*) FROM shipments WHERE status='on_time'").fetchone()[0]
+        delayed = conn.execute("SELECT COUNT(*) FROM shipments WHERE status='delayed'").fetchone()[0]
+        avg_delay_cost = conn.execute(
+            "SELECT AVG(cost_usd) FROM shipments WHERE status='delayed'"
+        ).fetchone()[0] or 0
+        high_severity_events = conn.execute(
+            "SELECT COUNT(*) FROM disruption_events WHERE severity='high'"
+        ).fetchone()[0]
+    finally:
+        conn.close()
+
+    return {
+        "total_shipments": total,
+        "on_time_shipments": on_time,
+        "delayed_shipments": delayed,
+        "on_time_rate_pct": (on_time / total * 100) if total else 0,
+        "avg_cost_per_delayed_shipment_usd": avg_delay_cost,
+        "high_severity_disruption_events": high_severity_events,
     }

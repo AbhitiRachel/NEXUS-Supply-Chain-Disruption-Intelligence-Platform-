@@ -112,12 +112,23 @@ def test_require_permission_blocks_viewer_from_admin_action():
         pass
 
 
-def test_require_permission_allows_analyst_to_view_audit_log():
+def test_require_permission_allows_admin_to_view_audit_log():
     store = UserStore()
-    user = store.create_user("dave", "password", "analyst")
+    user = store.create_user("dave", "password", "admin")
     token = issue_token(user)
     claims = require_permission(token, "view_audit_log")
     assert claims["sub"] == "dave"
+
+
+def test_require_permission_blocks_analyst_from_audit_log():
+    store = UserStore()
+    user = store.create_user("erin", "password", "analyst")
+    token = issue_token(user)
+    try:
+        require_permission(token, "view_audit_log")
+        assert False, "Expected AuthError -- audit log is admin-only"
+    except AuthError:
+        pass
 
 
 # --- Prompt injection guard --------------------------------------------------

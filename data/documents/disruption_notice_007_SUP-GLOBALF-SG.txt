@@ -1,11 +1,11 @@
 DISRUPTION NOTICE
-Date: 2026-08-29
+Date: 2026-09-01
 Affected entity: GlobalFoundries Singapore (SUP-GLOBALF-SG)
 Type: geopolitical_restriction
 
 Summary: GlobalFoundries Singapore has reported an operational disruption classified as
 geopolitical_restriction, expected to last approximately 14 days beginning
-2026-07-30. Preliminary assessment indicates significant impact on
+2026-08-02. Preliminary assessment indicates significant impact on
 throughput.
 
 Recommended monitoring: shipments and orders routed through or dependent on
