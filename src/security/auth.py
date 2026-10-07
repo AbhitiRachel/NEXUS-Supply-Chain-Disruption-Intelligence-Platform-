@@ -29,7 +29,7 @@ TOKEN_EXPIRY_SECONDS = 8 * 60 * 60  # 8-hour session
 ROLES = ["viewer", "analyst", "admin"]
 ROLE_PERMISSIONS = {
     "viewer": {"query"},
-    "analyst": {"query", "view_audit_log", "run_simulation"},
+    "analyst": {"query", "run_simulation"},
     "admin": {"query", "view_audit_log", "run_simulation", "manage_users"},
 }
 
