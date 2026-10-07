@@ -128,7 +128,12 @@ def answer_question(
     error_feedback = None
 
     for attempt_num in range(1, max_attempts + 1):
-        sql = generate_sql_fn(question, schema, error_feedback)
+        try:
+            sql = generate_sql_fn(question, schema, error_feedback)
+        except Exception as e:
+            attempts.append(SQLAttempt(sql="", success=False,
+                error=f"SQL generator unavailable: {type(e).__name__}: {e}"))
+            break
 
         if not _is_safe_select(sql):
             attempts.append(SQLAttempt(sql=sql, success=False, rejected_unsafe=True))
@@ -199,7 +204,7 @@ Rules:
         user_content = f"{question}\n\n{error_feedback}\nPlease provide a corrected query."
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model=os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b"),
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_content},
