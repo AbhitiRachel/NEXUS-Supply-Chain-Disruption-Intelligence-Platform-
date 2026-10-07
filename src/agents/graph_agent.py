@@ -81,10 +81,24 @@ class LocalGraphBackend:
             factories = [entity_id]
 
         elif entity_type == "Port":
+            # Origin side: suppliers that ship out of this port (SHIPS_FROM), and
+            # every factory those suppliers feed.
             affected_suppliers = [e["from"] for e in self._edges_to(entity_id, "SHIPS_FROM")]
             factory_set = set()
             for s in affected_suppliers:
                 factory_set.update(e["to"] for e in self._edges_from(s, "FEEDS"))
+
+            # Destination side: factories this port supplies (SUPPLIES), and the
+            # suppliers whose routes arrive here AND feed one of those factories.
+            # Without this, an outage at Yokohama/Hamburg/Rotterdam traced nothing.
+            dest_factories = {e["to"] for e in self._edges_from(entity_id, "SUPPLIES")}
+            if dest_factories:
+                factory_set.update(dest_factories)
+                for origin in (e["from"] for e in self._edges_to(entity_id, "ROUTE_TO")):
+                    for s in (e["from"] for e in self._edges_to(origin, "SHIPS_FROM")):
+                        fed = {e["to"] for e in self._edges_from(s, "FEEDS")}
+                        if fed & dest_factories and s not in affected_suppliers:
+                            affected_suppliers.append(s)
             factories = list(factory_set)
 
         elif entity_type == "Route":
@@ -120,10 +134,18 @@ class LocalGraphBackend:
     def is_single_point_of_failure(self, entity_type: str, entity_id: str) -> bool | None:
         if entity_type == "Port":
             suppliers = [e["from"] for e in self._edges_to(entity_id, "SHIPS_FROM")]
-            # SPOF if none of these suppliers has an alternate port
-            return all(
+            # Origin side: SPOF if none of these suppliers has an alternate port
+            origin_spof = all(
                 len(self._edges_from(s, "SHIPS_FROM")) <= 1 for s in suppliers
             ) and len(suppliers) > 0
+
+            # Destination side: SPOF if this port is the ONLY port supplying at
+            # least one factory it serves
+            supplied = [e["to"] for e in self._edges_from(entity_id, "SUPPLIES")]
+            dest_spof = any(
+                len(self._edges_to(f, "SUPPLIES")) == 1 for f in supplied
+            )
+            return origin_spof or dest_spof
 
         if entity_type == "Supplier":
             fed_factories = [e["to"] for e in self._edges_from(entity_id, "FEEDS")]
