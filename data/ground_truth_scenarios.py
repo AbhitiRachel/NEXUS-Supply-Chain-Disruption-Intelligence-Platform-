@@ -104,6 +104,57 @@ SCENARIOS = [
             "each factory has partial alternate sourcing."
         ),
     },
+    {
+        "id": "SC-006",
+        "description": "Port closure at Yokohama (Japan) for 7 days",
+        "disrupted_entity": {"type": "Port", "id": "PORT-YOKOHAMA"},
+        "duration_days": 7,
+        "expected_affected_suppliers": [
+            "SUP-TSMC-HC", "SUP-UMC-TN", "SUP-SAMSUNG-HW", "SUP-MURATA-VN"
+        ],
+        "expected_affected_factories": ["FAC-SONY-KUMAMOTO", "FAC-DENSO-NAGOYA"],
+        "expected_affected_products": ["PROD-CAMERA-M4", "PROD-SENSOR-X1"],
+        "expected_severity": "high",
+        "rationale": (
+            "Yokohama is a destination port: it supplies Sony Kumamoto and Denso "
+            "Nagoya, and receives routes from Keelung, Busan and Singapore. "
+            "Suppliers affected are those on those routes that feed Sony or Denso "
+            "(TSMC, UMC, Samsung, Murata); GlobalFoundries and Infineon feed only "
+            "Bosch/Philips, which are served via other ports. Yokohama is the only "
+            "port supplying both factories, so it is a single point of failure."
+        ),
+    },
+    {
+        "id": "SC-007",
+        "description": "Port closure at Hamburg (Germany) for 7 days",
+        "disrupted_entity": {"type": "Port", "id": "PORT-HAMBURG"},
+        "duration_days": 7,
+        "expected_affected_suppliers": ["SUP-TSMC-HC"],
+        "expected_affected_factories": ["FAC-BOSCH-STUTTGART"],
+        "expected_affected_products": ["PROD-POWER-CTRL"],
+        "expected_severity": "high",
+        "rationale": (
+            "Hamburg supplies Bosch Stuttgart and receives only the Keelung route. "
+            "Of the Keelung suppliers, only TSMC feeds Bosch (UMC feeds Sony only). "
+            "Hamburg is Bosch's only supplying port, so it is a single point of failure."
+        ),
+    },
+    {
+        "id": "SC-008",
+        "description": "Port closure at Rotterdam (Netherlands) for 7 days",
+        "disrupted_entity": {"type": "Port", "id": "PORT-ROTTERDAM"},
+        "duration_days": 7,
+        "expected_affected_suppliers": ["SUP-INFINEON-KL", "SUP-SAMSUNG-HW"],
+        "expected_affected_factories": ["FAC-PHILIPS-EINDHOVEN"],
+        "expected_affected_products": ["PROD-DISPLAY-D2"],
+        "expected_severity": "high",
+        "rationale": (
+            "Rotterdam supplies Philips Eindhoven and receives routes from Singapore "
+            "and Busan. Of the suppliers on those routes, only Infineon and Samsung "
+            "feed Philips (GlobalFoundries and Murata do not). Rotterdam is Philips' "
+            "only supplying port, so it is a single point of failure."
+        ),
+    },
 ]
 
 
