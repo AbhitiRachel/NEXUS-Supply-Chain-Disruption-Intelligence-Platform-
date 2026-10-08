@@ -21,17 +21,39 @@ Endpoints:
   GET  /health
 """
 
-from fastapi import FastAPI, HTTPException, Header
+import time
+
+from fastapi import FastAPI, HTTPException, Header, Request
 from pydantic import BaseModel
 
 from src.security.auth import UserStore, issue_token, AuthError
 from src.agents.sql_agent import groq_sql_generator
 from src.audit.hash_chain import AuditLog
+from src.monitoring.metrics import metrics
 from src.api.handlers import (
     handle_query, handle_whatif, handle_get_audit_log, handle_get_kpis, HandlerError,
 )
 
 app = FastAPI(title="NEXUS", description="Agentic Supply Chain Resilience Platform", version="0.1.0")
+
+
+@app.middleware("http")
+async def metrics_middleware(request: Request, call_next):
+    start = time.perf_counter()
+    success = True
+
+    try:
+        response = await call_next(request)
+        if response.status_code >= 400:
+            success = False
+        return response
+    except Exception:
+        success = False
+        raise
+    finally:
+        latency_ms = (time.perf_counter() - start) * 1000
+        metrics.record(latency_ms, success)
+
 
 # Demo user store -- replace with a real user table / identity provider
 # before any real deployment. Seeded with one user per role so the API
@@ -120,3 +142,8 @@ def kpis(authorization: str = Header(None)):
         return handle_get_kpis(token)
     except HandlerError as e:
         raise HTTPException(status_code=e.status_code, detail=e.message)
+
+@app.get("/metrics")
+def get_metrics():
+    """Return lightweight API request metrics."""
+    return metrics.snapshot()
